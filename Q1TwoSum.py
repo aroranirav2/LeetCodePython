@@ -3,7 +3,7 @@ class Solution:
         dictionary = {}
         for i in range(len(nums)):
             complement = target - nums[i]
-            if(complement in dictionary.keys()):
+            if complement in dictionary.keys():
                 return [dictionary[complement], i]
             dictionary[nums[i]] = i
         raise ValueError("combination not found")
